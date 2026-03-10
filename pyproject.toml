@@ -1,6 +1,6 @@
 [project]
 name = "readables-py"
-version = "0.2.3"
+version = "0.2.4"
 description = "Add readability and self-documentation to Python code"
 requires-python = ">=3.9"
 dependencies = []
