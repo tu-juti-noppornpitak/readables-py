@@ -36,6 +36,11 @@ class TestUnit(TestCase):
 
         self.assertEqual(evm.required_env('T_ALPHA', kind=int), expected_value)
 
+    def test_optional_flag_without_changing_default_value(self):
+        evm = EnvironmentVariableManager()
+        self.assertFalse(evm.optional_flag('T_BETA'))
+        self.assertTrue(evm.optional_flag('T_BETA', default=True))
+
     def test_markdown_export(self):
         os.environ['READABLES_ENV_ALLOW_UNSET_REQUIRED'] = 'true'
 
